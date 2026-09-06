@@ -1,0 +1,19 @@
+{
+  "name": "Linux-Desktop-noVNC",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [6080],
+  "portsAttributes": {
+    "6080": {
+      "label": "noVNC Desktop",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "postStartCommand": "/usr/local/bin/start-desktop.sh",
+  "customizations": {
+    "vscode": {
+      "settings": {}
+    }
+  }
+}
